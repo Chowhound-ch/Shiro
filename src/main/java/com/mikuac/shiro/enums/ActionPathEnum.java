@@ -301,7 +301,16 @@ public enum ActionPathEnum implements ActionPath {
     /**
      * 设置群消息表情回应
      */
-    SET_GROUP_REACTION("set_group_reaction");
+    SET_GROUP_REACTION("set_group_reaction"),
+    /**
+     * 设置群消息表情回应
+     */
+    SET_MSG_EMOJI_LIKE("set_msg_emoji_like"),
+
+    /**
+     * 获取合并转发消息
+     */
+    GET_FORWARD_MSG("get_forward_msg");
 
     /**
      * 请求路径

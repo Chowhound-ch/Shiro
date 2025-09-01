@@ -7,29 +7,42 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-/**
- * Created on 2021/7/8.
- *
- * @author Zero
- * @version $Id: $Id
- */
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder(toBuilder = true)
 @EqualsAndHashCode(callSuper = true)
-public class GroupIncreaseNoticeEvent extends NoticeEvent {
+public class MessageEmojiLikeNoticeEvent extends NoticeEvent {
 
-    @JsonProperty("sub_type")
-    private String subType;
-
+    /**
+     * 群组ID
+     */
     @JsonProperty("group_id")
     private Long groupId;
 
+    /**
+     * 消息ID
+     */
+    @JsonProperty("message_id")
+    private Integer messageId;
+
+    /**
+     * 操作者ID
+     */
     @JsonProperty("operator_id")
     private Long operatorId;
 
-    @JsonProperty("user_id")
-    private Long userId;
+    /**
+     * 表情ID
+     */
+    @JsonProperty("code")
+    private String code;
+
+    /**
+     * 表情数量
+     */
+    @JsonProperty("count")
+    private Integer count;
 
 }
